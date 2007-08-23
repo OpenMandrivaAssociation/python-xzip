@@ -1,7 +1,7 @@
 %define oname   xzip
 %define name    python-%oname
 %define version 0.1
-%define release %mkrel 4
+%define release %mkrel 5
 
 
 Summary:       Sequence index and item ranges for python
