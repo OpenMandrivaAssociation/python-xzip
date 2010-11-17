@@ -22,8 +22,8 @@ map, and filter functions.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -m644 -D %SOURCE0 $RPM_BUILD_ROOT/%{_libdir}/python%pyver/site-packages/%{oname}.py
-cd $RPM_BUILD_ROOT/%{_libdir}/python%pyver/site-packages/
+install -m644 -D %SOURCE0 $RPM_BUILD_ROOT/%py_puresitedir/%{oname}.py
+cd $RPM_BUILD_ROOT%py_puresitedir
 python -c "import %{oname}"
 
 %clean
@@ -31,5 +31,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-%{_libdir}/python*/site-packages/%{oname}.py*
+%py_puresitedir/%{oname}.py
 
